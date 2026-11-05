@@ -1,3 +1,9 @@
+/home/rh4479/hwdesign-cmdresp/takehome/fir/scenarios.py:116: RuntimeWarning: invalid value encountered in scalar multiply
+  acc = f32(acc + f32(h * hist[k]))
+/home/rh4479/hwdesign-cmdresp/takehome/fir/scenarios.py:116: RuntimeWarning: overflow encountered in scalar multiply
+  acc = f32(acc + f32(h * hist[k]))
+/home/rh4479/hwdesign-cmdresp/takehome/fir/scenarios.py:116: RuntimeWarning: invalid value encountered in scalar add
+  acc = f32(acc + f32(h * hist[k]))
 /home/rh4479/hwdesign-cmdresp/takehome/fir/fir.py:140: RuntimeWarning: invalid value encountered in multiply
   prod = (h[k] * xp[lo:lo + n]).astype(np.float32)
 /home/rh4479/hwdesign-cmdresp/takehome/fir/fir.py:140: RuntimeWarning: overflow encountered in multiply
@@ -12,19 +18,24 @@
   acc = (acc + prod).astype(np.float32)
 fir_source:
     fir.py
-    UP-TO-DATE
+    RUNNING...
+    PASSED (0.0 s)
 scenarios_source:
     scenarios.py
-    UP-TO-DATE
+    RUNNING...
+    PASSED (0.0 s)
 gen_include:
     include
-    UP-TO-DATE
+    RUNNING...
+    PASSED (0.0 s)
 sources:
     fir_body_impl.tpp
-    UP-TO-DATE
+    RUNNING...
+    PASSED (0.0 s)
 scenarios:
     data/scenarios.txt
-    UP-TO-DATE
+    RUNNING...
+    PASSED (0.6 s)
 gen_kernel:
     gen/fir.hpp
     gen/fir.cpp
@@ -34,12 +45,12 @@ gen_kernel:
 py_model:
     results/model_done.txt
     RUNNING...
-    PASSED (0.8 s)
+    PASSED (0.7 s)
 py_sim:
     results/pysim_done.txt
     results/sim_log_w32.csv
     RUNNING...
-    PASSED (1.0 s)
+    PASSED (0.6 s)
 csim:
     results/csim_done.txt
     RUNNING...
@@ -64,13 +75,13 @@ w32 scenario fresh_after_no_tlast_proc halted=0 error=0 tx_id=0 unread_words=0
 INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 1062
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:10; Allocated memory: 0.000 MB.
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:07; Allocated memory: 0.000 MB.
 WAVEFLOW_SUCCESS: fir C simulation passed.
-INFO: [HLS 200-112] Total CPU user time: 8.67 seconds. Total CPU system time: 1.61 seconds. Total elapsed time: 13.54 seconds; peak allocated memory: 286.449 MB.
-INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 15s
+INFO: [HLS 200-112] Total CPU user time: 8.14 seconds. Total CPU system time: 1.41 seconds. Total elapsed time: 10.03 seconds; peak allocated memory: 286.465 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 12s
 INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.
 
-    PASSED (18.7 s)
+    PASSED (15.1 s)
 check_model:
     results/check_model.json
     RUNNING...
@@ -114,7 +125,7 @@ check_model:
     model  w32/fresh_after_early_tlast_proc_after_ok PASS
     model  w32/err_no_tlast_proc PASS
     model  w32/fresh_after_no_tlast_proc PASS
-    PASSED (0.2 s)
+    PASSED (0.1 s)
 check_pysim:
     results/check_pysim.json
     RUNNING...
@@ -156,7 +167,7 @@ check_pysim:
     pysim  w32/err_early_tlast_proc_after_ok PASS
     pysim  w32/fresh_after_early_tlast_proc_after_ok PASS
     pysim  w32/fresh_after_no_tlast_proc PASS
-    PASSED (0.2 s)
+    PASSED (0.1 s)
 check_csim:
     results/check_csim.json
     RUNNING...
@@ -225,20 +236,20 @@ w32 scenario err_no_tlast_proc halted=1 error=5 tx_id=85 unread_words=0
 w32 scenario fresh_after_no_tlast_proc halted=0 error=0 tx_id=0 unread_words=0
 INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 1062
 INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
-INFO: [HLS 200-2161] Finished Command cosim_design Elapsed time: 00:02:40; Allocated memory: 11.840 MB.
+INFO: [HLS 200-2161] Finished Command cosim_design Elapsed time: 00:02:19; Allocated memory: 11.852 MB.
 WAVEFLOW_SUCCESS: fir C synthesis and RTL co-simulation of  passed.
-INFO: [HLS 200-112] Total CPU user time: 320.65 seconds. Total CPU system time: 14.81 seconds. Total elapsed time: 195.75 seconds; peak allocated memory: 410.637 MB.
-INFO: [vitis-run 60-791] Total elapsed time: 0h 3m 18s
+INFO: [HLS 200-112] Total CPU user time: 287.23 seconds. Total CPU system time: 12.47 seconds. Total elapsed time: 166.49 seconds; peak allocated memory: 410.645 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 2m 48s
 INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.
 
-    PASSED (200.8 s)
+    PASSED (171.4 s)
 inspect_synth_w32:
     results/resources_w32.json
     results/loop_df_w32.csv
     RUNNING...
   fir: no platform selected — wrote resources_w32.json only
   modules {'lut': 25, 'ff': 2, 'dsp': 0, 'bram': 0, 'uram': 0} + integration {'bram': 0, 'dsp': 160, 'ff': 21009, 'lut': 28473, 'uram': 0} = top {'bram': 0, 'dsp': 160, 'ff': 21011, 'lut': 28498, 'uram': 0}
-    PASSED (0.1 s)
+    PASSED (0.0 s)
 check_cosim:
     results/check_cosim.json
     RUNNING...
@@ -282,7 +293,7 @@ check_cosim:
     cosim  w32/fresh_after_early_tlast_proc_after_ok PASS
     cosim  w32/err_no_tlast_proc PASS
     cosim  w32/fresh_after_no_tlast_proc PASS
-    PASSED (0.2 s)
+    PASSED (0.1 s)
 summary:
     results/summary.json
     RUNNING...

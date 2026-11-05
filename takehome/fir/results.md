@@ -3,7 +3,8 @@
 Frame: Waveflow `stream_inband` (host-launched kernel, AXI-Stream in/out, AXI-Lite status; chosen
 because the prompt names it and asks for ap_start/status registers and Vitis csim/cosim).
 Part xc7z020clg484-1, clock target 10 ns, Vitis HLS 2026.1 (installed; the frame text says 2025.1).
-Everything is in `fir/`; rebuild with `python fir_build.py --through summary` (log: `build_log.txt`).
+Everything is in `fir/`; rebuild with `python fir_build.py --force --through summary` (log: `build_log.txt`).
+Last run: run 2, prompt version 2 (see Run History).
 
 ## Interface
 
@@ -47,11 +48,11 @@ Stream words are 32 bits (`in_bw = out_bw = 32`); full layouts in `layout.md` (f
 | Estimated clock | < 10 ns | 7.432 ns (uncertainty 2.70 ns) | PASS | `results/synth/fir_csynth.rpt` |
 | Resources | no target | BRAM 0, DSP 160 (72%), FF 21011 (19%), LUT 28498 (53%), URAM 0 | no target | `results/resources_w32.json`, `results/synth/csynth.rpt` |
 | Taps 1..32, nsamp 1..1024 | supported | scenarios ntaps_1/32, nsamp_1/1024 pass in C sim and co-sim | PASS | `results/check_csim.json`, `results/check_cosim.json` |
-| C sim / co-sim vs model | bit for bit | identical in 39 of 40 scenarios; `special_values` differs only in NaN sign bit (see Assumptions) | PASS with note | `data/w32/*/{model,csim,cosim}` |
+| C sim / co-sim vs model | bit for bit, except NaN outputs (only need to be NaN in both) | all 40 scenarios agree: non-NaN words identical, NaN words are NaN in both (`special_values` NaN words differ in sign bit only, allowed by prompt v2) | PASS | `results/check_csim.json`, `results/check_cosim.json`, `data/w32/*/{model,csim,cosim}` |
 
 `csynth.rpt` also prints "Timing" as the issue type with slack -0.13 ns for the top; Vitis emits this because the
 7.432 ns estimate exceeds the 7.3 ns budget left after the 2.7 ns clock-uncertainty margin
-(`logs/hls_run_tcl.log`, HLS 200-871). By the stated rule this is an uncertainty warning, not a FAIL.
+(`logs/hls_run_tcl.log`, HLS 200-871). The prompt (v2) says a slack warning from the clock-uncertainty margin is not a failure, so it is not a FAIL.
 
 ## Verification
 
@@ -74,7 +75,7 @@ Stream words are 32 bits (`in_bw = out_bw = 32`); full layouts in `layout.md` (f
 | `few_samples` | PASS | PASS | PASS | PASS | yes | none |  |
 | `multi_process` | PASS | PASS | PASS | PASS | yes | none |  |
 | `reconfig_ntaps` | PASS | PASS | PASS | PASS | yes | none |  |
-| `special_values` | PASS | PASS | PASS | PASS | NaN sign only | none |  |
+| `special_values` | PASS | PASS | PASS | PASS | yes (NaN words: NaN in all) | none |  |
 | `max_tx_id` | PASS | PASS | PASS | PASS | yes | none |  |
 | `timing` | PASS | PASS | PASS | PASS | yes | none |  |
 | `err_unknown_cmd` | PASS | PASS | PASS | PASS | yes | halted=1 UNKNOWN_CMD tx_id=91 | `fresh_after_unknown_cmd`: PASS |
@@ -108,30 +109,32 @@ Stream words are 32 bits (`in_bw = out_bw = 32`); full layouts in `layout.md` (f
 
 ## Assumptions
 
-- The prompt did not say how big cmd_type is or how to encode an unknown command: it is a uint8 (not an enum field,
-  because Waveflow's enum field cannot carry an unknown value). The header carries both `ntaps` and `nsamp` (uint16), the unused one is 0.
-- The response header carries tx_id and nsamp (0 for CONFIG and END); END is answered with a header.
-- Five error codes (one for early and one for missing TLAST, shared by tap and sample bursts); distinguished by `tx_id` and context.
+Prompt v2 now states the header layout, cmd_type values, response-header contents, error codes, the tolerance (rtol 1e-5 + atol 1e-5),
+the NaN rule, and that error activations send nothing after the failing command; those are no longer assumptions (see Interface).
+Remaining choices where the prompt is silent or ambiguous:
+
+- `cmd_type` is a uint8 field (not a Waveflow enum, which cannot carry an unknown value); `ntaps` and `nsamp` are uint16.
+- END is answered with a header (tx_id, nsamp = 0) and the kernel returns with status clear.
+- `tx_id` status register = tx_id of the failing command.
 - A CONFIG error leaves nothing sent; the old state is irrelevant because the kernel halts.
-- Error activations send nothing after the bad command (Vitis co-sim cannot replay unread input). "No data after a bad header is read" is
-  therefore enforced by construction in cosim, and is not tested with queued data behind the header.
-- NaN: x86 (model, C sim) produces the NaN `0xffc00000` for invalid operations (inf-inf, 0*inf); the RTL produces `0x7fc00000`.
-  Co-sim therefore differs from model/C sim in 10 output words of `special_values`, only in that NaN's sign bit. The checker treats any NaN as equal to any NaN;
-  all other words are bit-identical. NaN inputs propagate as NaN. Denormal handling is not tested separately.
-- np.convolve comparison uses rtol 1e-5 plus atol 1e-5, since outputs near zero from cancellation make a pure relative test meaningless.
-- Tool versions: Vitis HLS 2026.1 was the installed one.
+- Because error activations send nothing after the bad command, "no data after a bad header is read" holds by construction in co-sim and is not tested with queued data behind the header.
+- NaN: x86 (model, C sim) gives `0xffc00000` for invalid operations (inf-inf, 0*inf); RTL gives `0x7fc00000`. The checker (`scenarios.py`) treats any NaN as equal to any NaN and
+  everything else (words, TLAST, burst boundaries, status) exactly. This is the rule in prompt v2. NaN inputs propagate as NaN. Denormal handling is not tested separately.
+- The prompt's "- - -" in the early-TLAST-in-PROCESS bullet and "n unknown command type" are read as typos.
+- Pysim (not required by the prompt) is kept as a functional check only; its timing seeds in `fir.py` are scaffold defaults and are not used or reported.
+- Tool version: Vitis HLS 2026.1 (the installed one; the prompt does not name a version). Python 3.12 venv with `~/waveflow` installed was used to drive the build.
 - The process document asks to stop for review after Stage 1; the task asked for the full build in one go, so Stage 1 and 2 were done together.
-  The Stage 1 artifacts (`scenarios.py`, `layout.md`, `fir_eval`) were not changed after the first simulations.
 
 ## Open Items
 
-- NaN sign bit differs between RTL and the x86 model (above); not reworked.
-- Timing model (pysim `proc_latency` / `proc_ii`) was not calibrated against co-sim and `validate_timing` is not run; pysim is checked for function only.
-  The error-path VCD and figure steps of the scaffold were removed from the DAG. Unused scaffold files remain (`fir_figures.py`, `fir_calibrate.py`, `timing_analysis.py`).
-- The Slack in `csynth.rpt` for the top is -0.13 ns against the 7.3 ns budget (uncertainty), see Targets.
+- Slack in `csynth.rpt` for the top is -0.13 ns against the 7.3 ns budget left after the 2.7 ns uncertainty (HLS 200-871); not a FAIL under prompt v2.
+- Error-path scenarios do not test queued data behind a bad header (co-sim cannot replay unread input; prompt v2 accepts this).
+- Otherwise none. Run 1's open items are closed: the NaN rule is now in the prompt; the Python timing model is not required; unused scaffold files were deleted in run 2
+  (`fir_figures.py`, `fir_calibrate.py`, `timing_analysis.py`, and the unused `ExtractPyTimingStep` / `ErrorVcdStep` classes in `fir_build.py`).
 
 ## Run History
 
 | Run | Prompt version | What was built / changed | What passed |
 |---|---|---|---|
 | 1 | 1 | Scaffolded `stream_inband` as `fir`; FIR schemas, `fir_eval`, `fir_stream_model`, 40 scenarios, C++ body (32-term chain, II=1), testbench, build DAG (32-bit only) | model, pysim, C sim, co-sim (40/40 vs expected; NaN sign note), synthesis: II 1, 7.432 ns, DSP 160 |
+| 2 | 2 | Read prompt v2: no kernel change needed (NaN rule already what the checker implements, header/codes already matched). Deleted unused scaffold files and dead build steps; rewrote Assumptions/Open Items/Targets to v2; forced a full rebuild (`--force`): model, pysim, csim, csynth, cosim | model, pysim, C sim, co-sim 40/40 (NaN rule), synthesis II 1, 7.432 ns (< 10 ns), latency 1273 cycles for the timing activation, DSP 160; results identical to run 1 |

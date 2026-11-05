@@ -1,7 +1,7 @@
 {
   "0": {
     "basicblocks": 1,
-    "calls": "5",
+    "calls": "8",
     "control_depth": 0,
     "def_use_depth": 0,
     "file": "fir.cpp",
@@ -13,73 +13,19 @@
   },
   "1": {
     "basicblocks": 1,
-    "calls": "",
-    "control_depth": 0,
-    "def_use_depth": 2,
-    "file": "streamutils_hls.h",
-    "fileloc": 174,
-    "instructions": 44,
-    "loads": {
-      "L": 4
-    },
-    "memory_accesses": 0,
-    "name": "write_axi4_word<32>",
-    "stores": {
-      "L": 4
-    },
-    "total_instructions": 267
-  },
-  "10": {
-    "basicblocks": 1,
-    "calls": "",
-    "control_depth": 0,
-    "def_use_depth": 2,
-    "file": "streamutils_hls.h",
-    "fileloc": 99,
-    "instructions": 10,
-    "loads": {
-      "L": 1
-    },
-    "memory_accesses": 0,
-    "name": "float_to_uint",
-    "stores": {
-      "L": 1
-    },
-    "total_instructions": 10
-  },
-  "11": {
-    "basicblocks": 1,
-    "calls": "",
-    "control_depth": 0,
-    "def_use_depth": 2,
-    "file": "streamutils_hls.h",
-    "fileloc": 112,
-    "instructions": 10,
-    "loads": {
-      "L": 1
-    },
-    "memory_accesses": 0,
-    "name": "uint_to_float",
-    "stores": {
-      "L": 1
-    },
-    "total_instructions": 10
-  },
-  "12": {
-    "basicblocks": 1,
-    "calls": "",
+    "calls": "10",
     "control_depth": 0,
     "def_use_depth": 0,
-    "file": "fir_body_impl.tpp",
-    "fileloc": 30,
+    "file": "float32_array_utils.h",
+    "fileloc": 261,
     "instructions": 2,
     "memory_accesses": 0,
-    "name": "code",
-    "total_instructions": 19
+    "name": "read_axi4_stream_lane<32>",
+    "total_instructions": 214
   },
-  "13": {
+  "10": {
     "basicblocks": 5,
-    "calls": "11",
+    "calls": "7",
     "control_depth": 0,
     "def_use_depth": 3,
     "file": "float32_array_utils.h",
@@ -92,9 +38,9 @@
     },
     "total_instructions": 212
   },
-  "14": {
+  "11": {
     "basicblocks": 3,
-    "calls": "10 1",
+    "calls": "4 3",
     "control_depth": 0,
     "def_use_depth": 3,
     "file": "float32_array_utils.h",
@@ -110,9 +56,45 @@
     },
     "total_instructions": 309
   },
+  "12": {
+    "basicblocks": 1,
+    "calls": "16",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "fir_cmd_hdr.h",
+    "fileloc": 223,
+    "instructions": 3,
+    "memory_accesses": 0,
+    "name": "read_axi4_stream<32>",
+    "total_instructions": 660
+  },
+  "13": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "fir_body_impl.tpp",
+    "fileloc": 30,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "code",
+    "total_instructions": 19
+  },
+  "14": {
+    "basicblocks": 1,
+    "calls": "11",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "float32_array_utils.h",
+    "fileloc": 274,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "write_axi4_stream_lane<32>",
+    "total_instructions": 311
+  },
   "15": {
     "basicblocks": 1,
-    "calls": "12",
+    "calls": "13",
     "control_depth": 0,
     "def_use_depth": 2,
     "file": "fir_body_impl.tpp",
@@ -129,18 +111,6 @@
     "total_instructions": 55
   },
   "16": {
-    "basicblocks": 1,
-    "calls": "14",
-    "control_depth": 0,
-    "def_use_depth": 0,
-    "file": "float32_array_utils.h",
-    "fileloc": 274,
-    "instructions": 2,
-    "memory_accesses": 0,
-    "name": "write_axi4_stream_lane<32>",
-    "total_instructions": 311
-  },
-  "2": {
     "basicblocks": 18,
     "calls": "",
     "control_depth": 0,
@@ -158,9 +128,63 @@
     },
     "total_instructions": 657
   },
+  "2": {
+    "basicblocks": 1,
+    "calls": "3",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "fir_resp_hdr.h",
+    "fileloc": 97,
+    "instructions": 39,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 0,
+    "name": "write_axi4_stream_impl",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 440
+  },
   "3": {
     "basicblocks": 1,
-    "calls": "4",
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "streamutils_hls.h",
+    "fileloc": 174,
+    "instructions": 44,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 0,
+    "name": "write_axi4_word<32>",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 267
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "streamutils_hls.h",
+    "fileloc": 99,
+    "instructions": 10,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "float_to_uint",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 10
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "6",
     "control_depth": 0,
     "def_use_depth": 1,
     "file": "fir_body_impl.tpp",
@@ -176,9 +200,9 @@
     },
     "total_instructions": 456
   },
-  "4": {
+  "6": {
     "basicblocks": 1,
-    "calls": "9",
+    "calls": "2",
     "control_depth": 0,
     "def_use_depth": 1,
     "file": "fir_resp_hdr.h",
@@ -188,9 +212,27 @@
     "name": "write_axi4_stream<32>",
     "total_instructions": 443
   },
-  "5": {
+  "7": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "streamutils_hls.h",
+    "fileloc": 112,
+    "instructions": 10,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "uint_to_float",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 10
+  },
+  "8": {
     "basicblocks": 88,
-    "calls": "12 7 15 3 15 12 8 12 3 12 12 3 12 8 16 12 12 12 15",
+    "calls": "13 9 15 5 15 13 1 13 5 13 13 5 13 1 14 13 13 13 15",
     "control_depth": 5,
     "def_use_depth": 4,
     "file": "fir_body_impl.tpp",
@@ -206,21 +248,9 @@
     },
     "total_instructions": 3705
   },
-  "6": {
+  "9": {
     "basicblocks": 1,
-    "calls": "2",
-    "control_depth": 0,
-    "def_use_depth": 1,
-    "file": "fir_cmd_hdr.h",
-    "fileloc": 223,
-    "instructions": 3,
-    "memory_accesses": 0,
-    "name": "read_axi4_stream<32>",
-    "total_instructions": 660
-  },
-  "7": {
-    "basicblocks": 1,
-    "calls": "6",
+    "calls": "12",
     "control_depth": 0,
     "def_use_depth": 1,
     "file": "fir_cmd_hdr.h",
@@ -232,35 +262,5 @@
       "L": 1
     },
     "total_instructions": 668
-  },
-  "8": {
-    "basicblocks": 1,
-    "calls": "13",
-    "control_depth": 0,
-    "def_use_depth": 0,
-    "file": "float32_array_utils.h",
-    "fileloc": 261,
-    "instructions": 2,
-    "memory_accesses": 0,
-    "name": "read_axi4_stream_lane<32>",
-    "total_instructions": 214
-  },
-  "9": {
-    "basicblocks": 1,
-    "calls": "1",
-    "control_depth": 0,
-    "def_use_depth": 2,
-    "file": "fir_resp_hdr.h",
-    "fileloc": 97,
-    "instructions": 39,
-    "loads": {
-      "L": 2
-    },
-    "memory_accesses": 0,
-    "name": "write_axi4_stream_impl",
-    "stores": {
-      "L": 2
-    },
-    "total_instructions": 440
   }
 }

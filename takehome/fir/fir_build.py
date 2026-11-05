@@ -12,7 +12,6 @@ Every step covers both stream widths, 32 and 64 bits, unless its name ends in ``
     check_model      ...and compare it with the expected response
     py_sim           run pysim (the timing model) on the scenarios a pysim stream can express
     check_pysim      ...compare
-    extract_py_timing_w*   pysim's cycle count for the timing scenario
     gen_include      schema headers, serializers and the stream/testbench helpers
     sources          the hand-written C++ in place (a build outside this directory)
     gen_kernel       the kernel boundary (gen/fir.hpp, gen/fir.cpp: tops fir and
@@ -22,10 +21,7 @@ Every step covers both stream widths, 32 and 64 bits, unless its name ends in ``
     csynth_w*        C synthesis, then RTL co-simulation of the timing scenario
     inspect_synth_w* loops, II and resources from the synthesis report
     check_cosim      the co-simulated responses, compared
-    extract_cosim_timing_w* / validate_timing_w*   cosim cycles vs the pysim estimate
-    error_vcd        cosim of early_tlast_vcd with port tracing: the error-path waveform
-    summary          every check, the synthesis reports and the timing verdicts
-    figures, sync_docs_figures   the docs figures, from the committed error-path VCD
+    summary          every check, the synthesis reports and the verdicts
 
 Every check compares against the same expected response, computed from each scenario's
 intent (scenarios.py) rather than from any implementation.
@@ -212,43 +208,6 @@ class PySimStep(BuildStep):
 
 
 @dataclass(kw_only=True)
-class ExtractPyTimingStep(BuildStep):
-    """pysim's cycle count for the timing scenario: one whole kernel call, ``ap_start`` to
-    return -- the same span the cosim report measures."""
-    word_bw: int
-    description = "Extract the timing scenario's cycle count from the pysim event log."
-    params = {"clk_freq": 100e6}
-
-    @property
-    def consumes(self) -> list:  # type: ignore[override]
-        return [f"log_w{self.word_bw}"]
-
-    @property
-    def produces(self) -> dict:  # type: ignore[override]
-        return {f"py_timing_w{self.word_bw}": Path(f"results/py_timing_w{self.word_bw}.json")}
-
-    def run(self, config: BuildConfig, clk_freq, **art) -> dict:
-        log = art[f"log_w{self.word_bw}"]
-        events: dict[str, float] = {}
-        with open(log, newline="") as f:
-            for row in csv.DictReader(f):
-                events.setdefault(row["event"], float(row["time"]))
-        t0, t1 = events.get("proc_begin"), events.get("proc_end")
-        if t0 is None or t1 is None:
-            raise RuntimeError(f"missing timing events in {log}: {sorted(events)}")
-        out = config.root_dir / "results" / f"py_timing_w{self.word_bw}.json"
-        out.write_text(json.dumps({
-            "transaction_cycles": int(round((t1 - t0) * clk_freq)),
-            "transaction_seconds": t1 - t0,
-            "clk_freq": float(clk_freq),
-            "word_bw": self.word_bw,
-            "source": "py_sim",
-            "events": {"proc_begin": t0, "proc_end": t1},
-        }, indent=2), encoding="utf-8")
-        return {f"py_timing_w{self.word_bw}": out}
-
-
-@dataclass(kw_only=True)
 class CheckStep(BuildStep):
     """Compare one stage's recorded responses with the expected ones (scenarios.check).
 
@@ -385,35 +344,6 @@ class CSynthStep(BuildStep):
 
 
 @dataclass(kw_only=True)
-class ErrorVcdStep(BuildStep):
-    """The error-path waveform: cosim of ``early_tlast_vcd`` (32 bits), traced, as a VCD.
-
-    It runs in its own Vitis project, ``vcd_proj``, so it never overwrites the
-    timing scenario's cosim report.  The scenario sends nothing after the bad burst, so the
-    kernel leaves nothing unread for cosim to replay.  The co-simulated response is checked
-    like every other stage, and the VCD lands in ``vcd/error_path.vcd``.
-    """
-    description = "Cosim of early_tlast_vcd with port tracing; write vcd/error_path.vcd."
-    consumes = ["fir_cpp", "fir_hpp", "fir_body_impl", "include_dir", "check_csim"]
-    produces = {"error_vcd": Path("vcd/error_path.vcd")}
-    params = {"live_output": False, "clk_freq": 100e6}
-
-    def run(self, config: BuildConfig, live_output, clk_freq, **_) -> dict:
-        from waveflow.scripts.xsim_vcd import run_xsim_vcd
-
-        root = config.root_dir
-        d = width_dir(root, 32)
-        (d / "early_tlast_vcd" / "cosim").mkdir(parents=True, exist_ok=True)
-        _run_vitis(config, "vcd", 32, live_output, clk_freq)
-        problems = S.check(d, "cosim", ["early_tlast_vcd"])["early_tlast_vcd"]
-        if problems:
-            raise RuntimeError(f"cosim of early_tlast_vcd differs from the expected: {problems}")
-        vcd = run_xsim_vcd(top=TOPS[32], comp="vcd_proj", out="error_path.vcd",
-                           trace_level="port", workdir=root)
-        return {"error_vcd": Path(vcd)}
-
-
-@dataclass(kw_only=True)
 class SummaryStep(BuildStep):
     """Everything in one place, and the target that runs every check.
 
@@ -421,7 +351,7 @@ class SummaryStep(BuildStep):
     would skip the cosim response check and the synthesis reports.  This step depends on
     all of them and writes ``results/summary.json``.
     """
-    description = "Collect every check, the synthesis reports and the timing verdicts."
+    description = "Collect every check, the synthesis reports and the verdicts."
     consumes = ["check_model", "check_pysim", "check_csim", "check_cosim",
                 *[f"{a}_w{w}" for w in WIDTHS for a in ("loop_df", "resources")]]
     produces = {"summary": Path("results/summary.json")}
