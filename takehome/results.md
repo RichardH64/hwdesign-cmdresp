@@ -3,8 +3,8 @@
 Frame: Waveflow `stream_inband` (host-launched kernel, AXI-Stream in/out, AXI-Lite status; chosen
 because the prompt names it and asks for ap_start/status registers and Vitis csim/cosim).
 Part xc7z020clg484-1, clock target 10 ns, Vitis HLS 2026.1 (installed; the frame text says 2025.1).
-Everything is in `fir/`; rebuild with `python fir_build.py --force --through summary` (log: `build_log.txt`).
-Last run: run 2, prompt version 2 (see Run History).
+Everything is in this folder (`takehome/`, next to `prompt.md`); rebuild from here with `python fir_build.py --force --through summary` (log: `build_log.txt`).
+Last run: run 3, a path check after moving the build out of `fir/`; no synthesis or co-simulation rerun (see Run History).
 
 ## Interface
 
@@ -19,7 +19,7 @@ Stream words are 32 bits (`in_bw = out_bw = 32`); full layouts in `layout.md` (f
   (`tx_id[15:0]`, `nsamp[31:16]`, TLAST), sent before processing, then nsamp float32 outputs, TLAST on the last.
 - **END**: header only; response is a header (tx_id, nsamp = 0); the kernel returns with status clear.
 - **Status registers (AXI-Lite, read-only)**: `halted` 0x10, `error` 0x20, `tx_id` 0x30
-  (from `w32_proj/solution1/syn/report/csynth.rpt`). Cleared at the start of each activation. Nothing else is written over AXI-Lite.
+  (from `w32_proj/solution1/syn/report/csynth.rpt`; copy in `results/synth/csynth.rpt`). Cleared at the start of each activation. Nothing else is written over AXI-Lite.
 - **Error codes** (`error`): 0 NO_ERROR, 1 UNKNOWN_CMD, 2 NO_CONFIG (PROCESS before CONFIG),
   3 BAD_COUNT (ntaps not 1..32 / nsamp not 1..1024), 4 TLAST_EARLY (taps or samples), 5 NO_TLAST (taps or samples).
   `tx_id` register = tx_id of the failing command.
@@ -48,7 +48,7 @@ Stream words are 32 bits (`in_bw = out_bw = 32`); full layouts in `layout.md` (f
 | Estimated clock | < 10 ns | 7.432 ns (uncertainty 2.70 ns) | PASS | `results/synth/fir_csynth.rpt` |
 | Resources | no target | BRAM 0, DSP 160 (72%), FF 21011 (19%), LUT 28498 (53%), URAM 0 | no target | `results/resources_w32.json`, `results/synth/csynth.rpt` |
 | Taps 1..32, nsamp 1..1024 | supported | scenarios ntaps_1/32, nsamp_1/1024 pass in C sim and co-sim | PASS | `results/check_csim.json`, `results/check_cosim.json` |
-| C sim / co-sim vs model | bit for bit, except NaN outputs (only need to be NaN in both) | all 40 scenarios agree: non-NaN words identical, NaN words are NaN in both (`special_values` NaN words differ in sign bit only, allowed by prompt v2) | PASS | `results/check_csim.json`, `results/check_cosim.json`, `data/w32/*/{model,csim,cosim}` |
+| C sim / co-sim vs model | bit for bit, except NaN outputs (only need to be NaN in both) | all 40 scenarios agree: non-NaN words identical, NaN words are NaN in both (`special_values` NaN words differ in sign bit only, allowed by prompt v2) | PASS | `results/check_csim.json`, `results/check_cosim.json`, `data/w32/<scenario>/{model,csim,cosim}` |
 
 `csynth.rpt` also prints "Timing" as the issue type with slack -0.13 ns for the top; Vitis emits this because the
 7.432 ns estimate exceeds the 7.3 ns budget left after the 2.7 ns clock-uncertainty margin
@@ -59,7 +59,7 @@ Stream words are 32 bits (`in_bw = out_bw = 32`); full layouts in `layout.md` (f
 - Hand-computed examples and `np.convolve` (relative tolerance 1e-5, absolute 1e-5 near zero), split-stream equality, and the checker
   rejecting a 1-ulp wrong output and an error path that does not halt: all PASS, `results/model_tests.log` (from `test_model.py`).
 - Each row below compares the recorded output to the expected response computed from the scenario intent
-  (`scenarios.py`): `results/check_model.json`, `check_pysim.json`, `check_csim.json`, `check_cosim.json`.
+  (`scenarios.py`): `results/check_model.json`, `results/check_pysim.json`, `results/check_csim.json`, `results/check_cosim.json`.
   Co-sim ran all 40 scenarios in a single `cosim_design` run (`results/cosim/fir_cosim.rpt`, 40 transactions, status Pass).
   Error scenarios send only the words the kernel reads; each is followed by its own fresh activation (CONFIG, PROCESS, END).
   pysim cannot omit TLAST, so the two missing-TLAST scenarios and their expected statuses are n/a for pysim.
@@ -127,10 +127,14 @@ Remaining choices where the prompt is silent or ambiguous:
 
 ## Open Items
 
+- Paths: the cited files all exist from this folder. The reports in `w32_proj/`, `logs/` and `build_log.txt` were written before the move and still contain absolute
+  `.../takehome/fir/...` paths (including `w32_proj/hls.app`, which points at `fir/include/streamutils.cpp`). They are records of the run, not inputs: `run.tcl` opens the project with
+  `-reset` and finds `include/streamutils.cpp` relative to itself, so the next build rewrites them. Not rerun, as asked; a rebuild is the only check that would prove it.
+- The build could not be imported in this session (no Python environment with waveflow's dependencies, e.g. `simpy`, was found), so the path resolution in `fir_build.py` was checked by reading it, not by running it.
 - Slack in `csynth.rpt` for the top is -0.13 ns against the 7.3 ns budget left after the 2.7 ns uncertainty (HLS 200-871); not a FAIL under prompt v2.
 - Error-path scenarios do not test queued data behind a bad header (co-sim cannot replay unread input; prompt v2 accepts this).
 - Otherwise none. Run 1's open items are closed: the NaN rule is now in the prompt; the Python timing model is not required; unused scaffold files were deleted in run 2
-  (`fir_figures.py`, `fir_calibrate.py`, `timing_analysis.py`, and the unused `ExtractPyTimingStep` / `ErrorVcdStep` classes in `fir_build.py`).
+  (`fir_figures.py`, `fir_calibrate.py`, `timing_analysis.py`, which no longer exist, and the unused `ExtractPyTimingStep` / `ErrorVcdStep` classes in `fir_build.py`).
 
 ## Run History
 
@@ -138,3 +142,4 @@ Remaining choices where the prompt is silent or ambiguous:
 |---|---|---|---|
 | 1 | 1 | Scaffolded `stream_inband` as `fir`; FIR schemas, `fir_eval`, `fir_stream_model`, 40 scenarios, C++ body (32-term chain, II=1), testbench, build DAG (32-bit only) | model, pysim, C sim, co-sim (40/40 vs expected; NaN sign note), synthesis: II 1, 7.432 ns, DSP 160 |
 | 2 | 2 | Read prompt v2: no kernel change needed (NaN rule already what the checker implements, header/codes already matched). Deleted unused scaffold files and dead build steps; rewrote Assumptions/Open Items/Targets to v2; forced a full rebuild (`--force`): model, pysim, csim, csynth, cosim | model, pysim, C sim, co-sim 40/40 (NaN rule), synthesis II 1, 7.432 ns (< 10 ns), latency 1273 cycles for the timing activation, DSP 160; results identical to run 1 |
+| 3 | 2 | Build moved from `fir/` to this folder. Checked every file cited here exists (it does; the former `fir/` directory was empty and removed), `fir_build.py` resolves from `__file__` and `run.tcl` from its own directory, so no code change. Updated the folder line, qualified bare file names, listed the stale absolute paths in generated logs | No tools rerun. Results are those of run 2 (unchanged); path resolution checked by reading, not by executing `fir_build.py` |
