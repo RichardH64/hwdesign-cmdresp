@@ -1,0 +1,289 @@
+/home/rh4479/hwdesign-cmdresp/takehome/fir/fir.py:140: RuntimeWarning: invalid value encountered in multiply
+  prod = (h[k] * xp[lo:lo + n]).astype(np.float32)
+/home/rh4479/hwdesign-cmdresp/takehome/fir/fir.py:140: RuntimeWarning: overflow encountered in multiply
+  prod = (h[k] * xp[lo:lo + n]).astype(np.float32)
+/home/rh4479/hwdesign-cmdresp/takehome/fir/fir.py:141: RuntimeWarning: invalid value encountered in add
+  acc = (acc + prod).astype(np.float32)
+/home/rh4479/hwdesign-cmdresp/takehome/fir/fir.py:140: RuntimeWarning: invalid value encountered in multiply
+  prod = (h[k] * xp[lo:lo + n]).astype(np.float32)
+/home/rh4479/hwdesign-cmdresp/takehome/fir/fir.py:140: RuntimeWarning: overflow encountered in multiply
+  prod = (h[k] * xp[lo:lo + n]).astype(np.float32)
+/home/rh4479/hwdesign-cmdresp/takehome/fir/fir.py:141: RuntimeWarning: invalid value encountered in add
+  acc = (acc + prod).astype(np.float32)
+fir_source:
+    fir.py
+    UP-TO-DATE
+scenarios_source:
+    scenarios.py
+    UP-TO-DATE
+gen_include:
+    include
+    UP-TO-DATE
+sources:
+    fir_body_impl.tpp
+    UP-TO-DATE
+scenarios:
+    data/scenarios.txt
+    UP-TO-DATE
+gen_kernel:
+    gen/fir.hpp
+    gen/fir.cpp
+    fir_body_impl.tpp
+    RUNNING...
+    PASSED (0.0 s)
+py_model:
+    results/model_done.txt
+    RUNNING...
+    PASSED (0.8 s)
+py_sim:
+    results/pysim_done.txt
+    results/sim_log_w32.csv
+    RUNNING...
+    PASSED (1.0 s)
+csim:
+    results/csim_done.txt
+    RUNNING...
+ps_33 halted=1 error=3 tx_id=96 unread_words=0
+w32 scenario fresh_after_bad_ntaps_33 halted=0 error=0 tx_id=0 unread_words=0
+w32 scenario err_bad_ntaps_65535 halted=1 error=3 tx_id=97 unread_words=0
+w32 scenario fresh_after_bad_ntaps_65535 halted=0 error=0 tx_id=0 unread_words=0
+w32 scenario err_bad_nsamp_0  halted=1 error=3 tx_id=98 unread_words=0
+w32 scenario fresh_after_bad_nsamp_0 halted=0 error=0 tx_id=0 unread_words=0
+w32 scenario err_bad_nsamp_1025 halted=1 error=3 tx_id=99 unread_words=0
+w32 scenario fresh_after_bad_nsamp_1025 halted=0 error=0 tx_id=0 unread_words=0
+w32 scenario err_early_tlast_cfg halted=1 error=4 tx_id=81 unread_words=0
+w32 scenario fresh_after_early_tlast_cfg halted=0 error=0 tx_id=0 unread_words=0
+w32 scenario err_no_tlast_cfg halted=1 error=5 tx_id=82 unread_words=0
+w32 scenario fresh_after_no_tlast_cfg halted=0 error=0 tx_id=0 unread_words=0
+w32 scenario err_early_tlast_proc halted=1 error=4 tx_id=83 unread_words=0
+w32 scenario fresh_after_early_tlast_proc halted=0 error=0 tx_id=0 unread_words=0
+w32 scenario err_early_tlast_proc_after_ok halted=1 error=4 tx_id=84 unread_words=0
+w32 scenario fresh_after_early_tlast_proc_after_ok halted=0 error=0 tx_id=0 unread_words=0
+w32 scenario err_no_tlast_proc halted=1 error=5 tx_id=85 unread_words=0
+w32 scenario fresh_after_no_tlast_proc halted=0 error=0 tx_id=0 unread_words=0
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 1062
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:10; Allocated memory: 0.000 MB.
+WAVEFLOW_SUCCESS: fir C simulation passed.
+INFO: [HLS 200-112] Total CPU user time: 8.67 seconds. Total CPU system time: 1.61 seconds. Total elapsed time: 13.54 seconds; peak allocated memory: 286.449 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 15s
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.
+
+    PASSED (18.7 s)
+check_model:
+    results/check_model.json
+    RUNNING...
+    model  w32/impulse          PASS
+    model  w32/carry_reconfig   PASS
+    model  w32/ntaps_1          PASS
+    model  w32/ntaps_32         PASS
+    model  w32/nsamp_1          PASS
+    model  w32/nsamp_1024       PASS
+    model  w32/few_samples      PASS
+    model  w32/multi_process    PASS
+    model  w32/reconfig_ntaps   PASS
+    model  w32/special_values   PASS
+    model  w32/max_tx_id        PASS
+    model  w32/timing           PASS
+    model  w32/err_unknown_cmd  PASS
+    model  w32/fresh_after_unknown_cmd PASS
+    model  w32/err_unknown_cmd_bad_count PASS
+    model  w32/fresh_after_unknown_cmd_bad_count PASS
+    model  w32/err_process_before_config PASS
+    model  w32/fresh_after_process_before_config PASS
+    model  w32/err_process_before_config_bad_count PASS
+    model  w32/fresh_after_process_before_config_bad_count PASS
+    model  w32/err_bad_ntaps_0  PASS
+    model  w32/fresh_after_bad_ntaps_0 PASS
+    model  w32/err_bad_ntaps_33 PASS
+    model  w32/fresh_after_bad_ntaps_33 PASS
+    model  w32/err_bad_ntaps_65535 PASS
+    model  w32/fresh_after_bad_ntaps_65535 PASS
+    model  w32/err_bad_nsamp_0  PASS
+    model  w32/fresh_after_bad_nsamp_0 PASS
+    model  w32/err_bad_nsamp_1025 PASS
+    model  w32/fresh_after_bad_nsamp_1025 PASS
+    model  w32/err_early_tlast_cfg PASS
+    model  w32/fresh_after_early_tlast_cfg PASS
+    model  w32/err_no_tlast_cfg PASS
+    model  w32/fresh_after_no_tlast_cfg PASS
+    model  w32/err_early_tlast_proc PASS
+    model  w32/fresh_after_early_tlast_proc PASS
+    model  w32/err_early_tlast_proc_after_ok PASS
+    model  w32/fresh_after_early_tlast_proc_after_ok PASS
+    model  w32/err_no_tlast_proc PASS
+    model  w32/fresh_after_no_tlast_proc PASS
+    PASSED (0.2 s)
+check_pysim:
+    results/check_pysim.json
+    RUNNING...
+    pysim  w32/impulse          PASS
+    pysim  w32/carry_reconfig   PASS
+    pysim  w32/ntaps_1          PASS
+    pysim  w32/ntaps_32         PASS
+    pysim  w32/nsamp_1          PASS
+    pysim  w32/nsamp_1024       PASS
+    pysim  w32/few_samples      PASS
+    pysim  w32/multi_process    PASS
+    pysim  w32/reconfig_ntaps   PASS
+    pysim  w32/special_values   PASS
+    pysim  w32/max_tx_id        PASS
+    pysim  w32/timing           PASS
+    pysim  w32/err_unknown_cmd  PASS
+    pysim  w32/fresh_after_unknown_cmd PASS
+    pysim  w32/err_unknown_cmd_bad_count PASS
+    pysim  w32/fresh_after_unknown_cmd_bad_count PASS
+    pysim  w32/err_process_before_config PASS
+    pysim  w32/fresh_after_process_before_config PASS
+    pysim  w32/err_process_before_config_bad_count PASS
+    pysim  w32/fresh_after_process_before_config_bad_count PASS
+    pysim  w32/err_bad_ntaps_0  PASS
+    pysim  w32/fresh_after_bad_ntaps_0 PASS
+    pysim  w32/err_bad_ntaps_33 PASS
+    pysim  w32/fresh_after_bad_ntaps_33 PASS
+    pysim  w32/err_bad_ntaps_65535 PASS
+    pysim  w32/fresh_after_bad_ntaps_65535 PASS
+    pysim  w32/err_bad_nsamp_0  PASS
+    pysim  w32/fresh_after_bad_nsamp_0 PASS
+    pysim  w32/err_bad_nsamp_1025 PASS
+    pysim  w32/fresh_after_bad_nsamp_1025 PASS
+    pysim  w32/err_early_tlast_cfg PASS
+    pysim  w32/fresh_after_early_tlast_cfg PASS
+    pysim  w32/fresh_after_no_tlast_cfg PASS
+    pysim  w32/err_early_tlast_proc PASS
+    pysim  w32/fresh_after_early_tlast_proc PASS
+    pysim  w32/err_early_tlast_proc_after_ok PASS
+    pysim  w32/fresh_after_early_tlast_proc_after_ok PASS
+    pysim  w32/fresh_after_no_tlast_proc PASS
+    PASSED (0.2 s)
+check_csim:
+    results/check_csim.json
+    RUNNING...
+    csim   w32/impulse          PASS
+    csim   w32/carry_reconfig   PASS
+    csim   w32/ntaps_1          PASS
+    csim   w32/ntaps_32         PASS
+    csim   w32/nsamp_1          PASS
+    csim   w32/nsamp_1024       PASS
+    csim   w32/few_samples      PASS
+    csim   w32/multi_process    PASS
+    csim   w32/reconfig_ntaps   PASS
+    csim   w32/special_values   PASS
+    csim   w32/max_tx_id        PASS
+    csim   w32/timing           PASS
+    csim   w32/err_unknown_cmd  PASS
+    csim   w32/fresh_after_unknown_cmd PASS
+    csim   w32/err_unknown_cmd_bad_count PASS
+    csim   w32/fresh_after_unknown_cmd_bad_count PASS
+    csim   w32/err_process_before_config PASS
+    csim   w32/fresh_after_process_before_config PASS
+    csim   w32/err_process_before_config_bad_count PASS
+    csim   w32/fresh_after_process_before_config_bad_count PASS
+    csim   w32/err_bad_ntaps_0  PASS
+    csim   w32/fresh_after_bad_ntaps_0 PASS
+    csim   w32/err_bad_ntaps_33 PASS
+    csim   w32/fresh_after_bad_ntaps_33 PASS
+    csim   w32/err_bad_ntaps_65535 PASS
+    csim   w32/fresh_after_bad_ntaps_65535 PASS
+    csim   w32/err_bad_nsamp_0  PASS
+    csim   w32/fresh_after_bad_nsamp_0 PASS
+    csim   w32/err_bad_nsamp_1025 PASS
+    csim   w32/fresh_after_bad_nsamp_1025 PASS
+    csim   w32/err_early_tlast_cfg PASS
+    csim   w32/fresh_after_early_tlast_cfg PASS
+    csim   w32/err_no_tlast_cfg PASS
+    csim   w32/fresh_after_no_tlast_cfg PASS
+    csim   w32/err_early_tlast_proc PASS
+    csim   w32/fresh_after_early_tlast_proc PASS
+    csim   w32/err_early_tlast_proc_after_ok PASS
+    csim   w32/fresh_after_early_tlast_proc_after_ok PASS
+    csim   w32/err_no_tlast_proc PASS
+    csim   w32/fresh_after_no_tlast_proc PASS
+    PASSED (0.1 s)
+csynth_w32:
+    w32_proj/solution1
+    results/cosim_done_w32.txt
+    RUNNING...
+_bad_ntaps_33 halted=1 error=3 tx_id=96 unread_words=0
+w32 scenario fresh_after_bad_ntaps_33 halted=0 error=0 tx_id=0 unread_words=0
+w32 scenario err_bad_ntaps_65535 halted=1 error=3 tx_id=97 unread_words=0
+w32 scenario fresh_after_bad_ntaps_65535 halted=0 error=0 tx_id=0 unread_words=0
+w32 scenario err_bad_nsamp_0  halted=1 error=3 tx_id=98 unread_words=0
+w32 scenario fresh_after_bad_nsamp_0 halted=0 error=0 tx_id=0 unread_words=0
+w32 scenario err_bad_nsamp_1025 halted=1 error=3 tx_id=99 unread_words=0
+w32 scenario fresh_after_bad_nsamp_1025 halted=0 error=0 tx_id=0 unread_words=0
+w32 scenario err_early_tlast_cfg halted=1 error=4 tx_id=81 unread_words=0
+w32 scenario fresh_after_early_tlast_cfg halted=0 error=0 tx_id=0 unread_words=0
+w32 scenario err_no_tlast_cfg halted=1 error=5 tx_id=82 unread_words=0
+w32 scenario fresh_after_no_tlast_cfg halted=0 error=0 tx_id=0 unread_words=0
+w32 scenario err_early_tlast_proc halted=1 error=4 tx_id=83 unread_words=0
+w32 scenario fresh_after_early_tlast_proc halted=0 error=0 tx_id=0 unread_words=0
+w32 scenario err_early_tlast_proc_after_ok halted=1 error=4 tx_id=84 unread_words=0
+w32 scenario fresh_after_early_tlast_proc_after_ok halted=0 error=0 tx_id=0 unread_words=0
+w32 scenario err_no_tlast_proc halted=1 error=5 tx_id=85 unread_words=0
+w32 scenario fresh_after_no_tlast_proc halted=0 error=0 tx_id=0 unread_words=0
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 1062
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-2161] Finished Command cosim_design Elapsed time: 00:02:40; Allocated memory: 11.840 MB.
+WAVEFLOW_SUCCESS: fir C synthesis and RTL co-simulation of  passed.
+INFO: [HLS 200-112] Total CPU user time: 320.65 seconds. Total CPU system time: 14.81 seconds. Total elapsed time: 195.75 seconds; peak allocated memory: 410.637 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 3m 18s
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.
+
+    PASSED (200.8 s)
+inspect_synth_w32:
+    results/resources_w32.json
+    results/loop_df_w32.csv
+    RUNNING...
+  fir: no platform selected — wrote resources_w32.json only
+  modules {'lut': 25, 'ff': 2, 'dsp': 0, 'bram': 0, 'uram': 0} + integration {'bram': 0, 'dsp': 160, 'ff': 21009, 'lut': 28473, 'uram': 0} = top {'bram': 0, 'dsp': 160, 'ff': 21011, 'lut': 28498, 'uram': 0}
+    PASSED (0.1 s)
+check_cosim:
+    results/check_cosim.json
+    RUNNING...
+    cosim  w32/impulse          PASS
+    cosim  w32/carry_reconfig   PASS
+    cosim  w32/ntaps_1          PASS
+    cosim  w32/ntaps_32         PASS
+    cosim  w32/nsamp_1          PASS
+    cosim  w32/nsamp_1024       PASS
+    cosim  w32/few_samples      PASS
+    cosim  w32/multi_process    PASS
+    cosim  w32/reconfig_ntaps   PASS
+    cosim  w32/special_values   PASS
+    cosim  w32/max_tx_id        PASS
+    cosim  w32/timing           PASS
+    cosim  w32/err_unknown_cmd  PASS
+    cosim  w32/fresh_after_unknown_cmd PASS
+    cosim  w32/err_unknown_cmd_bad_count PASS
+    cosim  w32/fresh_after_unknown_cmd_bad_count PASS
+    cosim  w32/err_process_before_config PASS
+    cosim  w32/fresh_after_process_before_config PASS
+    cosim  w32/err_process_before_config_bad_count PASS
+    cosim  w32/fresh_after_process_before_config_bad_count PASS
+    cosim  w32/err_bad_ntaps_0  PASS
+    cosim  w32/fresh_after_bad_ntaps_0 PASS
+    cosim  w32/err_bad_ntaps_33 PASS
+    cosim  w32/fresh_after_bad_ntaps_33 PASS
+    cosim  w32/err_bad_ntaps_65535 PASS
+    cosim  w32/fresh_after_bad_ntaps_65535 PASS
+    cosim  w32/err_bad_nsamp_0  PASS
+    cosim  w32/fresh_after_bad_nsamp_0 PASS
+    cosim  w32/err_bad_nsamp_1025 PASS
+    cosim  w32/fresh_after_bad_nsamp_1025 PASS
+    cosim  w32/err_early_tlast_cfg PASS
+    cosim  w32/fresh_after_early_tlast_cfg PASS
+    cosim  w32/err_no_tlast_cfg PASS
+    cosim  w32/fresh_after_no_tlast_cfg PASS
+    cosim  w32/err_early_tlast_proc PASS
+    cosim  w32/fresh_after_early_tlast_proc PASS
+    cosim  w32/err_early_tlast_proc_after_ok PASS
+    cosim  w32/fresh_after_early_tlast_proc_after_ok PASS
+    cosim  w32/err_no_tlast_proc PASS
+    cosim  w32/fresh_after_no_tlast_proc PASS
+    PASSED (0.2 s)
+summary:
+    results/summary.json
+    RUNNING...
+    PASSED (0.0 s)

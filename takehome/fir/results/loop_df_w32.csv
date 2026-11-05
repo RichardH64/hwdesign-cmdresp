@@ -1,0 +1,4 @@
+PipelineII,PipelineDepth,TripCountMin,TripCountMax,LatencyMin,LatencyMax
+1,197,1,1024,196,1219
+1,1,0,65535,0,65534
+,3 ~ 65544,,,,

@@ -1,0 +1,77 @@
+{
+    "1": {
+        "name": "fir_Pipeline_VITIS_LOOP_139_5",
+        "file": "gen\/fir.cpp",
+        "fileloc": "16",
+        "instructions": "274",
+        "total_instructions": "274",
+        "calls": "",
+        "basicblocks": "6",
+        "memory_accesses": "68",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "34"
+        },
+        "stores": {
+            "L": "35"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "write_axi4_stream<32>",
+        "file": "fir_resp_hdr.h",
+        "fileloc": "106",
+        "instructions": "7",
+        "total_instructions": "7",
+        "calls": "",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2"
+    },
+    "3": {
+        "name": "fir_Pipeline_VITIS_LOOP_104_3",
+        "file": "gen\/fir.cpp",
+        "fileloc": "16",
+        "instructions": "101",
+        "total_instructions": "101",
+        "calls": "",
+        "basicblocks": "36",
+        "memory_accesses": "37",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "2"
+        },
+        "stores": {
+            "L": "36"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "fir",
+        "file": "fir.cpp",
+        "fileloc": "3",
+        "instructions": "320",
+        "total_instructions": "716",
+        "calls": "2 3 2 2 1",
+        "basicblocks": "19",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "42"
+        },
+        "stores": {
+            "L": "117"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

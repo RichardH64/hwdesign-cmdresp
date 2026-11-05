@@ -1,0 +1,353 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/streamutils_hls.h:191:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="flush_axi4_stream_to_tlast" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:51:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="run_lane" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:58:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="run" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:78:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write_lane" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:84:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="run" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:104:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="run" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:126:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="run" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:152:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="run" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:174:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="run" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:196:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="run" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:223:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="run" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:238:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read_array_lane" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:244:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write_array_lane" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:250:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read_stream_lane" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:256:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write_stream_lane" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:262:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read_axi4_stream_lane" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:268:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read_axi4_stream_lane" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:275:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write_axi4_stream_lane" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:284:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read_framed_stream_lane" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:290:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read_framed_stream_lane" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:297:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write_framed_stream_lane" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:307:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read_boundary_lane" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:313:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read_boundary_lane" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:319:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write_boundary_lane" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:325:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write_boundary_lane" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:336:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="elem_read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:343:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="elem_write" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:382:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read_array_slice_dispatch" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:393:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read_array_slice_dispatch" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:404:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read_array_slice_dispatch" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:408:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read_array_slice_dispatch" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:418:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read_array_slice_dispatch" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:427:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read_array_slice_dispatch" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:432:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read_array_slice_dispatch" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:439:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read_array_slice" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:456:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write_array_slice_dispatch" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:463:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write_array_slice_dispatch" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:466:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write_array_slice_dispatch" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:479:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write_array_slice_dispatch" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:484:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write_array_slice_dispatch" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:491:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write_array_slice" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:507:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write_array_slice_rmw_dispatch" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:519:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write_array_slice_rmw_dispatch" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:531:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write_array_slice_rmw_dispatch" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:534:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write_array_slice_rmw_dispatch" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:547:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write_array_slice_rmw_dispatch" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:558:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write_array_slice_rmw_dispatch" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:563:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write_array_slice_rmw_dispatch" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:570:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write_array_slice_rmw" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:580:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read_array_slice" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:586:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write_array_slice" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:592:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read_stream" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:603:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read_axi4_stream" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:630:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read_axi4_stream" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:637:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read_axi4_stream" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:644:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read_axi4_stream" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:652:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write_stream" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:663:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write_axi4_stream" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:677:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read_framed_stream" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:693:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read_framed_stream" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="./include/float32_array_utils.h:700:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write_framed_stream" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="gen/../fir_body_impl.tpp:31:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="code" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="gen/../fir_body_impl.tpp:37:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="halt" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="gen/../fir_body_impl.tpp:46:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="respond" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="gen/../fir_body_impl.tpp:58:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="body" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="gen/../fir_body_impl.tpp:65:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="body" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=taps complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="gen/../fir_body_impl.tpp:66:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="body" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=win complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="gen/../fir_body_impl.tpp:68:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="body" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="gen/../fir_body_impl.tpp:126:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="body" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="gen/../fir_body_impl.tpp:140:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="body" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="gen/../fir_body_impl.tpp:149:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="body" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="gen/../fir_body_impl.tpp:157:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="body" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/rh4479/hwdesign-cmdresp/takehome/fir/run.tcl:86:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="fir" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=fir" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="gen/fir.cpp:10:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="fir" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=s_in" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="gen/fir.cpp:11:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="fir" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=m_out" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="gen/fir.cpp:12:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="fir" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=halted bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="gen/fir.cpp:13:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="fir" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=error bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="gen/fir.cpp:14:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="fir" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=tx_id bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="gen/fir.cpp:15:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="fir" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-131" msg_severity="INFO" msg_loc="gen/../fir_body_impl.tpp:38:13" msg_body="Inlining function 'fir_impl::code(FirError)' into 'fir_impl::halt(FirError, ap_uint&lt;16&gt; const&amp;, ap_uint&lt;1&gt;&amp;, ap_uint&lt;8&gt;&amp;, ap_uint&lt;16&gt;&amp;)'">
+        <args Callee="fir_impl::code(FirError)" Callee-DebugLoc="File gen/../fir_body_impl.tpp Line 30 Column 0" Caller="fir_impl::halt(FirError, ap_uint&lt;16&gt; const&amp;, ap_uint&lt;1&gt;&amp;, ap_uint&lt;8&gt;&amp;, ap_uint&lt;16&gt;&amp;)" Caller-DebugLoc="File gen/../fir_body_impl.tpp Line 36 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-490" msg_severity="INFO" msg_loc="gen/../fir_body_impl.tpp:31:1" msg_body="inline   false _ZN8fir_implL4codeE8FirError gen/../fir_body_impl.tpp:31:1">
+        <args PragmaFunction="_ZN8fir_implL4codeE8FirError" PragmaIsAuto="false" PragmaSrcLoc="gen/../fir_body_impl.tpp:31:1" PragmaSrcLoc-DebugLoc="File gen/../fir_body_impl.tpp Line 31 Column 1" PragmaType="inline"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-131" msg_severity="INFO" msg_loc="./include/float32_array_utils.h:263:5" msg_body="Inlining function 'float32_array_utils::read_axi4_stream_elem_impl&lt;32&gt;::run(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, float*, streamutils::tlast_status&amp;, int)' into 'void float32_array_utils::read_axi4_stream_lane&lt;32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, float*, int, streamutils::tlast_status&amp;)'">
+        <args Callee="float32_array_utils::read_axi4_stream_elem_impl&lt;32&gt;::run(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, float*, streamutils::tlast_status&amp;, int)" Callee-DebugLoc="File ./include/float32_array_utils.h Line 125 Column 0" Caller="void float32_array_utils::read_axi4_stream_lane&lt;32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, float*, int, streamutils::tlast_status&amp;)" Caller-DebugLoc="File ./include/float32_array_utils.h Line 261 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-490" msg_severity="INFO" msg_loc="./include/float32_array_utils.h:126:1" msg_body="inline   false _ZN19float32_array_utils26read_axi4_stream_elem_implILi32EE3runERN3hls6streamINS2_4axisI6ap_intILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEEPfRN11streamutils12tlast_statusEi ./include/float32_array_utils.h:126:1">
+        <args PragmaFunction="_ZN19float32_array_utils26read_axi4_stream_elem_implILi32EE3runERN3hls6streamINS2_4axisI6ap_intILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEEPfRN11streamutils12tlast_statusEi" PragmaIsAuto="false" PragmaSrcLoc="./include/float32_array_utils.h:126:1" PragmaSrcLoc-DebugLoc="File ./include/float32_array_utils.h Line 126 Column 1" PragmaType="inline"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-131" msg_severity="INFO" msg_loc="./include/float32_array_utils.h:276:5" msg_body="Inlining function 'float32_array_utils::write_axi4_stream_elem_impl&lt;32&gt;::run(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, float const*, bool, int)' into 'void float32_array_utils::write_axi4_stream_lane&lt;32&gt;(float const*, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, bool, int)'">
+        <args Callee="float32_array_utils::write_axi4_stream_elem_impl&lt;32&gt;::run(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, float const*, bool, int)" Callee-DebugLoc="File ./include/float32_array_utils.h Line 173 Column 0" Caller="void float32_array_utils::write_axi4_stream_lane&lt;32&gt;(float const*, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, bool, int)" Caller-DebugLoc="File ./include/float32_array_utils.h Line 274 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-490" msg_severity="INFO" msg_loc="./include/float32_array_utils.h:174:1" msg_body="inline   false _ZN19float32_array_utils27write_axi4_stream_elem_implILi32EE3runERN3hls6streamINS2_4axisI6ap_intILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEEPKfbi ./include/float32_array_utils.h:174:1">
+        <args PragmaFunction="_ZN19float32_array_utils27write_axi4_stream_elem_implILi32EE3runERN3hls6streamINS2_4axisI6ap_intILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEEPKfbi" PragmaIsAuto="false" PragmaSrcLoc="./include/float32_array_utils.h:174:1" PragmaSrcLoc-DebugLoc="File ./include/float32_array_utils.h Line 174 Column 1" PragmaType="inline"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-131" msg_severity="INFO" msg_loc="gen/../fir_body_impl.tpp:176:20" msg_body="Inlining function 'fir_impl::code(FirError)' into 'void fir_impl::body&lt;32, 32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;&amp;, ap_uint&lt;8&gt;&amp;, ap_uint&lt;16&gt;&amp;)'">
+        <args Callee="fir_impl::code(FirError)" Callee-DebugLoc="File gen/../fir_body_impl.tpp Line 30 Column 0" Caller="void fir_impl::body&lt;32, 32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;&amp;, ap_uint&lt;8&gt;&amp;, ap_uint&lt;16&gt;&amp;)" Caller-DebugLoc="File gen/../fir_body_impl.tpp Line 57 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-131" msg_severity="INFO" msg_loc="gen/../fir_body_impl.tpp:166:17" msg_body="Inlining function 'void float32_array_utils::write_axi4_stream_lane&lt;32&gt;(float const*, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, bool, int)' into 'void fir_impl::body&lt;32, 32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;&amp;, ap_uint&lt;8&gt;&amp;, ap_uint&lt;16&gt;&amp;)'">
+        <args Callee="void float32_array_utils::write_axi4_stream_lane&lt;32&gt;(float const*, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, bool, int)" Callee-DebugLoc="File ./include/float32_array_utils.h Line 274 Column 0" Caller="void fir_impl::body&lt;32, 32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;&amp;, ap_uint&lt;8&gt;&amp;, ap_uint&lt;16&gt;&amp;)" Caller-DebugLoc="File gen/../fir_body_impl.tpp Line 57 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-490" msg_severity="INFO" msg_loc="./include/float32_array_utils.h:275:1" msg_body="inline   false _ZN19float32_array_utils22write_axi4_stream_laneILi32EEEvPKfRN3hls6streamINS3_4axisI6ap_intIXT_EELm0ELm0ELm0ELh56ELb0EEELi0EEEbi ./include/float32_array_utils.h:275:1">
+        <args PragmaFunction="_ZN19float32_array_utils22write_axi4_stream_laneILi32EEEvPKfRN3hls6streamINS3_4axisI6ap_intIXT_EELm0ELm0ELm0ELh56ELb0EEELi0EEEbi" PragmaIsAuto="false" PragmaSrcLoc="./include/float32_array_utils.h:275:1" PragmaSrcLoc-DebugLoc="File ./include/float32_array_utils.h Line 275 Column 1" PragmaType="inline"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-131" msg_severity="INFO" msg_loc="gen/../fir_body_impl.tpp:144:17" msg_body="Inlining function 'void float32_array_utils::read_axi4_stream_lane&lt;32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, float*, int, streamutils::tlast_status&amp;)' into 'void fir_impl::body&lt;32, 32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;&amp;, ap_uint&lt;8&gt;&amp;, ap_uint&lt;16&gt;&amp;)'">
+        <args Callee="void float32_array_utils::read_axi4_stream_lane&lt;32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, float*, int, streamutils::tlast_status&amp;)" Callee-DebugLoc="File ./include/float32_array_utils.h Line 261 Column 0" Caller="void fir_impl::body&lt;32, 32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;&amp;, ap_uint&lt;8&gt;&amp;, ap_uint&lt;16&gt;&amp;)" Caller-DebugLoc="File gen/../fir_body_impl.tpp Line 57 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-490" msg_severity="INFO" msg_loc="./include/float32_array_utils.h:262:1" msg_body="inline   false _ZN19float32_array_utils21read_axi4_stream_laneILi32EEEvRN3hls6streamINS1_4axisI6ap_intIXT_EELm0ELm0ELm0ELh56ELb0EEELi0EEEPfiRN11streamutils12tlast_statusE ./include/float32_array_utils.h:262:1">
+        <args PragmaFunction="_ZN19float32_array_utils21read_axi4_stream_laneILi32EEEvRN3hls6streamINS1_4axisI6ap_intIXT_EELm0ELm0ELm0ELh56ELb0EEELi0EEEPfiRN11streamutils12tlast_statusE" PragmaIsAuto="false" PragmaSrcLoc="./include/float32_array_utils.h:262:1" PragmaSrcLoc-DebugLoc="File ./include/float32_array_utils.h Line 262 Column 1" PragmaType="inline"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-131" msg_severity="INFO" msg_loc="gen/../fir_body_impl.tpp:82:13" msg_body="Inlining function 'fir_impl::halt(FirError, ap_uint&lt;16&gt; const&amp;, ap_uint&lt;1&gt;&amp;, ap_uint&lt;8&gt;&amp;, ap_uint&lt;16&gt;&amp;)' into 'void fir_impl::body&lt;32, 32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;&amp;, ap_uint&lt;8&gt;&amp;, ap_uint&lt;16&gt;&amp;)'">
+        <args Callee="fir_impl::halt(FirError, ap_uint&lt;16&gt; const&amp;, ap_uint&lt;1&gt;&amp;, ap_uint&lt;8&gt;&amp;, ap_uint&lt;16&gt;&amp;)" Callee-DebugLoc="File gen/../fir_body_impl.tpp Line 36 Column 0" Caller="void fir_impl::body&lt;32, 32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;&amp;, ap_uint&lt;8&gt;&amp;, ap_uint&lt;16&gt;&amp;)" Caller-DebugLoc="File gen/../fir_body_impl.tpp Line 57 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-490" msg_severity="INFO" msg_loc="gen/../fir_body_impl.tpp:37:1" msg_body="inline   false _ZN8fir_implL4haltE8FirErrorRK7ap_uintILi16EERS1_ILi1EERS1_ILi8EERS2_ gen/../fir_body_impl.tpp:37:1">
+        <args PragmaFunction="_ZN8fir_implL4haltE8FirErrorRK7ap_uintILi16EERS1_ILi1EERS1_ILi8EERS2_" PragmaIsAuto="false" PragmaSrcLoc="gen/../fir_body_impl.tpp:37:1" PragmaSrcLoc-DebugLoc="File gen/../fir_body_impl.tpp Line 37 Column 1" PragmaType="inline"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-131" msg_severity="INFO" msg_loc="gen/../fir_body_impl.tpp:136:9" msg_body="Inlining function 'void fir_impl::respond&lt;32, 32&gt;(ap_uint&lt;16&gt; const&amp;, ap_uint&lt;16&gt; const&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;)' into 'void fir_impl::body&lt;32, 32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;&amp;, ap_uint&lt;8&gt;&amp;, ap_uint&lt;16&gt;&amp;)'">
+        <args Callee="void fir_impl::respond&lt;32, 32&gt;(ap_uint&lt;16&gt; const&amp;, ap_uint&lt;16&gt; const&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;)" Callee-DebugLoc="File gen/../fir_body_impl.tpp Line 45 Column 0" Caller="void fir_impl::body&lt;32, 32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;&amp;, ap_uint&lt;8&gt;&amp;, ap_uint&lt;16&gt;&amp;)" Caller-DebugLoc="File gen/../fir_body_impl.tpp Line 57 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-490" msg_severity="INFO" msg_loc="gen/../fir_body_impl.tpp:46:1" msg_body="inline   false _ZN8fir_implL7respondILi32ELi32EEEvRK7ap_uintILi16EES4_RN3hls6streamINS5_4axisI6ap_intIXT0_EELm0ELm0ELm0ELh56ELb0EEELi0EEE gen/../fir_body_impl.tpp:46:1">
+        <args PragmaFunction="_ZN8fir_implL7respondILi32ELi32EEEvRK7ap_uintILi16EES4_RN3hls6streamINS5_4axisI6ap_intIXT0_EELm0ELm0ELm0ELh56ELb0EEELi0EEE" PragmaIsAuto="false" PragmaSrcLoc="gen/../fir_body_impl.tpp:46:1" PragmaSrcLoc-DebugLoc="File gen/../fir_body_impl.tpp Line 46 Column 1" PragmaType="inline"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-131" msg_severity="INFO" msg_loc="gen/fir.cpp:16:5" msg_body="Inlining function 'void fir_impl::body&lt;32, 32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;&amp;, ap_uint&lt;8&gt;&amp;, ap_uint&lt;16&gt;&amp;)' into 'fir(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;&amp;, ap_uint&lt;8&gt;&amp;, ap_uint&lt;16&gt;&amp;)'">
+        <args Callee="void fir_impl::body&lt;32, 32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;&amp;, ap_uint&lt;8&gt;&amp;, ap_uint&lt;16&gt;&amp;)" Callee-DebugLoc="File gen/../fir_body_impl.tpp Line 57 Column 0" Caller="fir(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;&amp;, ap_uint&lt;8&gt;&amp;, ap_uint&lt;16&gt;&amp;)" Caller-DebugLoc="File gen/fir.cpp Line 9 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-490" msg_severity="INFO" msg_loc="gen/../fir_body_impl.tpp:58:1" msg_body="inline   false _ZN8fir_impl4bodyILi32ELi32EEEvRN3hls6streamINS1_4axisI6ap_intIXT_EELm0ELm0ELm0ELh56ELb0EEELi0EEERNS2_INS3_IS4_IXT0_EELm0ELm0ELm0ELh56ELb0EEELi0EEER7ap_uintILi1EERSD_ILi8EERSD_ILi16EE gen/../fir_body_impl.tpp:58:1">
+        <args PragmaFunction="_ZN8fir_impl4bodyILi32ELi32EEEvRN3hls6streamINS1_4axisI6ap_intIXT_EELm0ELm0ELm0ELh56ELb0EEELi0EEERNS2_INS3_IS4_IXT0_EELm0ELm0ELm0ELh56ELb0EEELi0EEER7ap_uintILi1EERSD_ILi8EERSD_ILi16EE" PragmaIsAuto="false" PragmaSrcLoc="gen/../fir_body_impl.tpp:58:1" PragmaSrcLoc-DebugLoc="File gen/../fir_body_impl.tpp Line 58 Column 1" PragmaType="inline"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="gen/../fir_body_impl.tpp:148:35" msg_body="Loop 'VITIS_LOOP_148_6' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_148_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="gen/../fir_body_impl.tpp:156:35" msg_body="Loop 'VITIS_LOOP_156_7' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_156_7"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="gen/fir.cpp:9:0" msg_body="Unrolling loop 'VITIS_LOOP_148_6' (gen/../fir_body_impl.tpp:148:35) in function 'fir' completely with a factor of 31">
+        <args Factor="31" LoopLoc="gen/../fir_body_impl.tpp:148:35" LoopName="VITIS_LOOP_148_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="gen/fir.cpp:9:0" msg_body="Unrolling loop 'VITIS_LOOP_156_7' (gen/../fir_body_impl.tpp:156:35) in function 'fir' completely with a factor of 32">
+        <args Factor="32" LoopLoc="gen/../fir_body_impl.tpp:156:35" LoopName="VITIS_LOOP_156_7"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="gen/fir.cpp:9:0" msg_body="Unrolling loop 'VITIS_LOOP_125_4' (gen/../fir_body_impl.tpp:125:31) in function 'fir' completely with a factor of 32">
+        <args Factor="32" LoopLoc="gen/../fir_body_impl.tpp:125:31" LoopName="VITIS_LOOP_125_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="gen/../fir_body_impl.tpp:126:1" msg_body="unroll  false fir gen/../fir_body_impl.tpp:126:1">
+        <args PragmaFunction="fir" PragmaIsAuto="false" PragmaSrcLoc="gen/../fir_body_impl.tpp:126:1" PragmaSrcLoc-DebugLoc="File gen/../fir_body_impl.tpp Line 126 Column 1" PragmaType="unroll"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="gen/fir.cpp:9:0" msg_body="Unrolling loop 'VITIS_LOOP_67_1' (gen/../fir_body_impl.tpp:67:22) in function 'fir' completely with a factor of 32">
+        <args Factor="32" LoopLoc="gen/../fir_body_impl.tpp:67:22" LoopName="VITIS_LOOP_67_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="gen/../fir_body_impl.tpp:68:1" msg_body="unroll  false fir gen/../fir_body_impl.tpp:68:1">
+        <args PragmaFunction="fir" PragmaIsAuto="false" PragmaSrcLoc="gen/../fir_body_impl.tpp:68:1" PragmaSrcLoc-DebugLoc="File gen/../fir_body_impl.tpp Line 68 Column 1" PragmaType="unroll"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="./include/fir_cmd_hdr.h:223:0" msg_body="Inlining function 'FirCmdHdr::read_axi4_stream_impl(FirCmdHdr::word_bw_tag&lt;32&gt;, FirCmdHdr*, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, streamutils::tlast_status&amp;)' into 'void FirCmdHdr::read_axi4_stream&lt;32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, streamutils::tlast_status&amp;)'">
+        <args Callee="FirCmdHdr::read_axi4_stream_impl(FirCmdHdr::word_bw_tag&lt;32&gt;, FirCmdHdr*, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, streamutils::tlast_status&amp;)" Callee-DebugLoc="File ./include/fir_cmd_hdr.h Line 176 Column 0" Caller="void FirCmdHdr::read_axi4_stream&lt;32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, streamutils::tlast_status&amp;)" Caller-DebugLoc="File ./include/fir_cmd_hdr.h Line 223 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="./include/fir_cmd_hdr.h:228:0" msg_body="Inlining function 'void FirCmdHdr::read_axi4_stream&lt;32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, streamutils::tlast_status&amp;)' into 'void FirCmdHdr::read_axi4_stream&lt;32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;)'">
+        <args Callee="void FirCmdHdr::read_axi4_stream&lt;32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, streamutils::tlast_status&amp;)" Callee-DebugLoc="File ./include/fir_cmd_hdr.h Line 223 Column 0" Caller="void FirCmdHdr::read_axi4_stream&lt;32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;)" Caller-DebugLoc="File ./include/fir_cmd_hdr.h Line 228 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="./include/fir_resp_hdr.h:97:0" msg_body="Inlining function 'void streamutils::write_axi4_word&lt;32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;, bool)' into 'FirRespHdr::write_axi4_stream_impl(FirRespHdr::word_bw_tag&lt;32&gt;, FirRespHdr const*, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, bool) (.72.78.84)'">
+        <args Callee="void streamutils::write_axi4_word&lt;32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;, bool)" Callee-DebugLoc="File ./include/streamutils_hls.h Line 174 Column 0" Caller="FirRespHdr::write_axi4_stream_impl(FirRespHdr::word_bw_tag&lt;32&gt;, FirRespHdr const*, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, bool) (.72.78.84)" Caller-DebugLoc="File ./include/fir_resp_hdr.h Line 97 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="./include/fir_resp_hdr.h:106:0" msg_body="Inlining function 'FirRespHdr::write_axi4_stream_impl(FirRespHdr::word_bw_tag&lt;32&gt;, FirRespHdr const*, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, bool) (.72.78.84)' into 'void FirRespHdr::write_axi4_stream&lt;32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, bool) const'">
+        <args Callee="FirRespHdr::write_axi4_stream_impl(FirRespHdr::word_bw_tag&lt;32&gt;, FirRespHdr const*, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, bool) (.72.78.84)" Callee-DebugLoc="File ./include/fir_resp_hdr.h Line 97 Column 0" Caller="void FirRespHdr::write_axi4_stream&lt;32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, bool) const" Caller-DebugLoc="File ./include/fir_resp_hdr.h Line 106 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="gen/fir.cpp:9:0" msg_body="Inlining function 'void FirCmdHdr::read_axi4_stream&lt;32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;)' into 'fir(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;&amp;, ap_uint&lt;8&gt;&amp;, ap_uint&lt;16&gt;&amp;)'">
+        <args Callee="void FirCmdHdr::read_axi4_stream&lt;32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;)" Callee-DebugLoc="File ./include/fir_cmd_hdr.h Line 228 Column 0" Caller="fir(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;&amp;, ap_uint&lt;8&gt;&amp;, ap_uint&lt;16&gt;&amp;)" Caller-DebugLoc="File gen/fir.cpp Line 9 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="gen/fir.cpp:9:0" msg_body="Inlining function 'streamutils::uint_to_float(unsigned int)' into 'fir(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;&amp;, ap_uint&lt;8&gt;&amp;, ap_uint&lt;16&gt;&amp;)'">
+        <args Callee="streamutils::uint_to_float(unsigned int)" Callee-DebugLoc="File ./include/streamutils_hls.h Line 112 Column 0" Caller="fir(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;&amp;, ap_uint&lt;8&gt;&amp;, ap_uint&lt;16&gt;&amp;)" Caller-DebugLoc="File gen/fir.cpp Line 9 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="gen/fir.cpp:9:0" msg_body="Inlining function 'streamutils::float_to_uint(float)' into 'fir(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;&amp;, ap_uint&lt;8&gt;&amp;, ap_uint&lt;16&gt;&amp;)'">
+        <args Callee="streamutils::float_to_uint(float)" Callee-DebugLoc="File ./include/streamutils_hls.h Line 99 Column 0" Caller="fir(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;&amp;, ap_uint&lt;8&gt;&amp;, ap_uint&lt;16&gt;&amp;)" Caller-DebugLoc="File gen/fir.cpp Line 9 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="gen/fir.cpp:9:0" msg_body="Inlining function 'void streamutils::write_axi4_word&lt;32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;, bool)' into 'fir(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;&amp;, ap_uint&lt;8&gt;&amp;, ap_uint&lt;16&gt;&amp;)'">
+        <args Callee="void streamutils::write_axi4_word&lt;32&gt;(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;32&gt;, bool)" Callee-DebugLoc="File ./include/streamutils_hls.h Line 174 Column 0" Caller="fir(hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, ap_uint&lt;1&gt;&amp;, ap_uint&lt;8&gt;&amp;, ap_uint&lt;16&gt;&amp;)" Caller-DebugLoc="File gen/fir.cpp Line 9 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="gen/../fir_body_impl.tpp:63:11" msg_body="Applying array_partition to 'taps.i': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="taps.i"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="gen/../fir_body_impl.tpp:65:1" msg_body="array_partition dim=1 type=complete variable=taps.i false fir gen/../fir_body_impl.tpp:65:1 taps.i gen/../fir_body_impl.tpp:63:11">
+        <args PragmaFunction="fir" PragmaIsAuto="false" PragmaOptions="dim=1 type=complete variable=taps.i" PragmaSrcLoc="gen/../fir_body_impl.tpp:65:1" PragmaSrcLoc-DebugLoc="File gen/../fir_body_impl.tpp Line 65 Column 1" PragmaType="array_partition" VarLoc="gen/../fir_body_impl.tpp:63:11" VarName="taps.i"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="gen/../fir_body_impl.tpp:64:11" msg_body="Applying array_partition to 'win.i': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="win.i"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="gen/../fir_body_impl.tpp:66:1" msg_body="array_partition dim=1 type=complete variable=win.i false fir gen/../fir_body_impl.tpp:66:1 win.i gen/../fir_body_impl.tpp:64:11">
+        <args PragmaFunction="fir" PragmaIsAuto="false" PragmaOptions="dim=1 type=complete variable=win.i" PragmaSrcLoc="gen/../fir_body_impl.tpp:66:1" PragmaSrcLoc-DebugLoc="File gen/../fir_body_impl.tpp Line 66 Column 1" PragmaType="array_partition" VarLoc="gen/../fir_body_impl.tpp:64:11" VarName="win.i"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="gen/../fir_body_impl.tpp:104:31" msg_body="pipeline   1 fir config_compile -pipeline_loops 64VITIS_LOOP_104_3 gen/../fir_body_impl.tpp:104:31">
+        <args LoopLoc="gen/../fir_body_impl.tpp:104:31" LoopLoc-DebugLoc="File gen/../fir_body_impl.tpp Line 104 Column 31" LoopName="VITIS_LOOP_104_3" PragmaFunction="fir" PragmaInferReason="config_compile -pipeline_loops 64" PragmaIsAuto="1" PragmaType="pipeline"/>
+    </msg>
+</xilinx:hls_fe_msgs>
