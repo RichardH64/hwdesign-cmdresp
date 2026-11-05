@@ -47,7 +47,7 @@ registers are cleared at the start of each one.
 
 The errors are:
 
-- n unknown command type
+- an unknown command type
 - a PROCESS before any CONFIG in the activation
 - an invalid count: ntaps not 1 to 32, or nsamp not 1 to 1024
 - a TLAST that arrives early, before the last word of a tap or sample burst
@@ -59,7 +59,7 @@ What is sent before each error is reported:
 
 - Header errors (unknown command, PROCESS before CONFIG, invalid count): nothing is sent for that command, and no data after the header is read.
 - Early or missing TLAST in a CONFIG burst: nothing is sent for that command, since its response comes after the taps.
-- Early TLAST in a PROCESS burst: the response header and the outputs for the earlier samples have already been sent. The sample that carries the early TLAST is still - - - processed, and its output is written with TLAST, closing the burst. This follows stream_inband.
+- Early TLAST in a PROCESS burst: the response header and the outputs for the earlier samples have already been sent. The sample that carries the early TLAST is still processed, and its output is written with TLAST, closing the burst. This follows stream_inband.
 - Missing TLAST in a PROCESS burst: all nsamp outputs have been sent, and the kernel puts TLAST on the last one itself.
 
 The error codes are 0 NO_ERROR, 1 UNKNOWN_CMD, 2 NO_CONFIG, 3 BAD_COUNT, 4 TLAST_EARLY and 5 NO_TLAST. TLAST_EARLY and NO_TLAST are shared by tap and sample bursts; the host tells them apart by the failing command's tx_id.
@@ -114,3 +114,4 @@ this folder to be committed: a reviewer opens them to check results.md.
 | 1 | First version | Initial specification |
 | 2 | NaN outputs only need to be NaN; everything else bit for bit | Run 1: RTL and x86 give NaNs with different sign bits (assumption 6, open item 1); I kept its choice |
 | 2 | Tolerance, header layout, codes, error codes, tool version and staging written in; no Python timing model; slack warning is not a failure | Run 1 assumptions 1 to 5 and 7 to 9, open items 2 and 3 |
+| 3 | Fixed two typos in the error lists | Run 2 read the typos correctly; no behavior change, so no rerun |
